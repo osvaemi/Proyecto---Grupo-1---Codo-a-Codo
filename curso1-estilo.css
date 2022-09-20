@@ -1,0 +1,21 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: sticky;
+}
+
+header {
+    font-size: xx-large;
+    text-align: left;
+    width: 100%;
+    background-color: #feada6;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.container {
+    display: grid;
+}
