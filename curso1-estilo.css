@@ -1,21 +1,77 @@
 * {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
-    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: white;
+    color: black;
+   }
+   .nav-links a {
+    color: black;
+   }
+
+   .logo {
+    font-size: 32px;
+    color: black;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+   }
+   .menu li:hover {
+    background-color: gray;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    padding: 5px 14px;
+   }
+
+li {
+    list-style: none;
 }
 
 header {
-    font-size: xx-large;
-    text-align: left;
+    font-size: 500%;
     width: 100%;
-    background-color: #feada6;
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: flex;
+    vertical-align: bottom;
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    padding-top: 100px;
+    padding-left: 15px;
+}
+
+.item-a{
+    grid-area: photo;
+}
+
+.item-b{
+    grid-area: aside;
+}
+
+.item-c{
+    grid-area: main;
 }
 
 .container {
+    margin-left: 50px;
+    margin-top: 20px;
     display: grid;
+    grid-template-columns: 200px 500px;
+    column-gap: 100px;
+    row-gap: 50px;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-areas: 
+        "photo main"
+        "aside main"
+        "aside main";
 }
