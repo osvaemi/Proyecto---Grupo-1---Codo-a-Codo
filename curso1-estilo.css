@@ -2,7 +2,11 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -10,15 +14,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    background-color: white;
+    background-color: whitesmoke;
     color: black;
    }
+
    .nav-links a {
     color: black;
    }
 
    .logo {
-    font-size: 32px;
+    font-size: 25px;
     color: black;
    }
    /* NAVBAR MENU */
@@ -50,6 +55,10 @@ header {
     padding-left: 15px;
 }
 
+img{
+    border-radius: 5%;
+}
+
 .item-a{
     grid-area: photo;
 }
@@ -59,19 +68,35 @@ header {
 }
 
 .item-c{
+    grid-area: title;
+    font-size: xx-large;
+}
+
+.item-d{
     grid-area: main;
 }
 
 .container {
-    margin-left: 50px;
+    margin-left: 20px;
     margin-top: 20px;
     display: grid;
     grid-template-columns: 200px 500px;
-    column-gap: 100px;
-    row-gap: 50px;
+    column-gap: 70px;
+    row-gap: 70px;
     grid-template-rows: 200px 200px 200px;
     grid-template-areas: 
-        "photo main"
+        "photo title"
         "aside main"
         "aside main";
+}
+
+footer{
+    position: bottom;
+    background-color: #070606;
+    color: #f5efef;
+    width: 100%;
+}
+
+#copyright {
+    font-size: x-small;
 }
