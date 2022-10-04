@@ -5,7 +5,7 @@
     box-sizing: content-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -16,30 +16,34 @@ nav {
     padding: 5px;
     background-color: whitesmoke;
     color: black;
-   }
+}
 
-   .nav-links a {
+.nav-links a {
     color: black;
-   }
+    font-size: 16px;
+}
 
-   .logo {
+.logo {
     font-size: 25px;
     color: black;
-   }
-   /* NAVBAR MENU */
-   .menu {
+}
+
+/* NAVBAR MENU */
+.menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
-   }
-   .menu li:hover {
+}
+
+.menu li:hover {
     background-color: gray;
     border-radius: 5px;
     transition: 0.3s ease;
-   }
-   .menu li {
+}
+
+.menu li {
     padding: 5px 14px;
-   }
+}
 
 li {
     list-style: none;
@@ -55,42 +59,67 @@ header {
     padding-left: 15px;
 }
 
-img{
+img {
     border-radius: 5%;
 }
 
-.item-a{
+/* .item-a{
     grid-area: photo;
 }
 
 .item-b{
     grid-area: aside;
+} */
+
+.card {
+    grid-area: card;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
 }
 
-.item-c{
+.title {
+    margin-top: 10px;
+    color: grey;
+    font-size: 18px;
+}
+
+#contacto-Claudio{
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.item-c {
     grid-area: title;
     font-size: xx-large;
 }
 
-.item-d{
+.item-d {
     grid-area: main;
 }
 
 .container {
     margin-left: 20px;
     margin-top: 20px;
+    margin-bottom: 200px;
     display: grid;
-    grid-template-columns: 200px 500px;
+    grid-template-columns: 300px 800px;
+    grid-template-rows: 50px;
     column-gap: 70px;
-    row-gap: 70px;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-areas: 
-        "photo title"
-        "aside main"
-        "aside main";
+    row-gap: 10px;
+    grid-template-areas:
+        "card title"
+        "card main"
+        "card main";
 }
 
-footer{
+footer {
+    display: flexbox;
+    padding: 15px;
     position: bottom;
     background-color: #070606;
     color: #f5efef;
@@ -99,4 +128,5 @@ footer{
 
 #copyright {
     font-size: x-small;
+    text-align: center;
 }
