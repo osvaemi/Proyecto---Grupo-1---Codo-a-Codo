@@ -15,38 +15,40 @@ nav {
     justify-content: space-between;
     padding: 5px;
     background-color: whitesmoke;
-    color: black;
+    color:	#232b2b;
 }
 
 .nav-links a {
-    color: black;
+    color: 	#232b2b;
     font-size: 16px;
 }
 
 .logo {
     font-size: 25px;
-    color: black;
+    color: 	#232b2b;
+    margin-left: 10px;
 }
 
-/* NAVBAR MENU */
 .menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
 }
 
-.menu li:hover {
-    background-color: gray;
-    border-radius: 5px;
-    transition: 0.3s ease;
+.menu li{
+    text-decoration: none;
+    list-style-type: none;
 }
 
-.menu li {
+.menu a {
+    text-decoration: none;
     padding: 5px 14px;
 }
 
-li {
-    list-style: none;
+.menu a:hover{
+    background-color: #feada6;
+    color: white;
+    border-radius: 10px;
 }
 
 header {
@@ -56,11 +58,12 @@ header {
     vertical-align: bottom;
     background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
     padding-top: 100px;
-    padding-left: 15px;
+    padding-left: 20px;
+    color: 	#232b2b;
 }
 
 img {
-    border-radius: 5%;
+    border-radius: 10px;
 }
 
 /* .item-a{
@@ -71,40 +74,9 @@ img {
     grid-area: aside;
 } */
 
-.card {
-    grid-area: card;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-}
-
-.title {
-    margin-top: 10px;
-    color: grey;
-    font-size: 18px;
-}
-
-#contacto-Claudio{
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
-    margin-top: 20px;
-    text-decoration: none;
-}
-
-.item-c {
-    grid-area: title;
-    font-size: xx-large;
-}
-
-.item-d {
-    grid-area: main;
-}
-
 .container {
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 200px;
     display: grid;
     grid-template-columns: 300px 800px;
@@ -114,16 +86,99 @@ img {
     grid-template-areas:
         "card title"
         "card main"
-        "card main";
+        "card ."
+        "card horarios"
+        ". mapa";
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: card;
+    padding: 10px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+}
+
+.title {
+    margin-top: 10px;
+    color: grey;
+    font-size: 22px;
+}
+
+.info-Claudio{
+    margin-bottom: 10px;
+}
+
+.contacto-Claudio {
+    background-color: #feada6;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 60%;
+    padding: 10px;
+    color: white;
+    justify-content: center;
+}
+
+.item-c {
+    grid-area: title;
+    font-size: xx-large;
+}
+
+.item-d {
+    grid-area: main;
+    max-height: 200px;
+}
+
+.horarios-ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.horarios a{
+    grid-area: horarios;
+    text-decoration: none;
+    background-color: #feada6;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.horarios{
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    height: 300px;
+    width: 100%;
+    border: 0px;
+    margin-top: 60px;
 }
 
 footer {
     display: flexbox;
     padding: 15px;
     position: bottom;
-    background-color: #070606;
+    background-color: #232b2b;
     color: #f5efef;
     width: 100%;
+}
+
+.footer-links{
+    padding-bottom: 50px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
 #copyright {
