@@ -131,9 +131,9 @@ img {
     margin-top: 40px;
     margin-bottom: 200px;
     display: grid;
-    grid-template-columns: 300px 800px;
+    grid-template-columns: 25% 65%;
     grid-template-rows: 50px;
-    column-gap: 70px;
+    column-gap: 4%;
     row-gap: 10px;
     grid-template-areas:
         "card title"
