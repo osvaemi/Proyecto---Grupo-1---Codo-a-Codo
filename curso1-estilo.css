@@ -20,6 +20,7 @@ nav {
     padding: 5px;
     background-color: whitesmoke;
     color: #232b2b;
+    width: 100%;
 }
 
 .nav-links a {
@@ -198,7 +199,7 @@ img {
 
 .item-d {
     grid-area: main;
-    max-height: 200px;
+    /* max-height: 200px; */
 }
 
 .horarios-ul {
@@ -290,4 +291,33 @@ footer {
 #copyright {
     font-size: x-small;
     text-align: center;
+}
+
+@media screen and (max-width: 500px) and (max-height: 1000px) {
+    .container {
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .horarios a {
+        grid-area: horarios;
+        text-decoration: none;
+        background-color: #feada6;
+        padding: 5px;
+        color: white;
+        border-radius: 10px;
+    }
+
+    .nav-links a {
+        color: #232b2b;
+        font-size: 12px;
+    }
+    
+    .logo {
+        font-size: 17px;
+        color: #232b2b;
+        margin-left: 5px;
+    }
 }
