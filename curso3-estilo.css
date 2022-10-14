@@ -81,7 +81,7 @@ nav {
     transform: scaleX(1);
   }
 
-.menu {
+  .menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
@@ -98,17 +98,19 @@ nav {
 }
 
 .menu a:hover {
+    transition: all .4s ease-in-out;
     background-color: #feada6;
     color: white;
     border-radius: 10px;
 }
+
 
 header {
     font-size: 500%;
     width: 100%;
     display: flex;
     vertical-align: bottom;
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    background: linear-gradient(to top, #feada6 0%, whitesmoke 100%);
     padding-top: 100px;
     padding-left: 25px;
     color: #232b2b;
@@ -253,11 +255,16 @@ footer {
     list-style-type: none;
     text-decoration: none;
 }
+.footer-links li:hover{
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
 
 .footer-accesos {
     list-style-type: none;
     text-decoration: none;
 }
+
 
 .footer-accesos a {
     color: #f5efef;
