@@ -11,9 +11,6 @@ html {
 
 body{
     background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 nav {
@@ -31,13 +28,17 @@ nav {
     font-size: 16px;
 }
 
-
 .logo {
     font-size: 25px;
     color: #232b2b;
     margin-left: 10px;
 }
 
+/* .logo:hover {
+    background-color: #232b2b;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+} */
 
 .logo {
     display: inline-block;
@@ -80,7 +81,7 @@ nav {
     transform: scaleX(1);
   }
 
-.menu {
+  .menu {
     display: flex;
     gap: 1em;
     font-size: 18px;
@@ -103,45 +104,134 @@ nav {
     border-radius: 10px;
 }
 
+
 header {
     font-size: 500%;
     width: 100%;
     display: flex;
     vertical-align: bottom;
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    background: linear-gradient(to top, #feada6 0%, whitesmoke 100%);
     padding-top: 100px;
-    padding-left: 10px;
+    padding-left: 25px;
     color: #232b2b;
     font-weight: 500;
 }
 
-h1{
-    font-size: large;
-    margin-left: 1%;
-    margin-top: 2%;
+img {
+    border-radius: 10px;
 }
 
-.formulario {
-    width: 100%;
-    display: flex;
-    /* padding: 20px; */
-    justify-content: center;
-    height: 500px;
+.container {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: 25% 65%;
+    grid-template-rows: 50px;
+    column-gap: 4%;
+    row-gap: 10px;
+    grid-template-areas:
+        "card title"
+        "card main"
+        "card ."
+        "card horarios"
+        ". mapa";
 }
 
-form{
+.card {
     display: flex;
     flex-direction: column;
-    width: 80%;
-}
-
-form li {
-    list-style-type: none;
-}
-
-.nyap{
-    display: flex;
     justify-content: space-between;
+    align-items: center;
+    grid-area: card;
+    padding: 10px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+}
+
+.cursos-index li{
+    display: flex, inline-block;
+}
+
+.title {
+    margin-top: 10px;
+    color: grey;
+    font-size: 22px;
+}
+
+.info-Claudio {
+    margin-bottom: 10px;
+}
+
+.contacto-Claudio {
+    background-color: #feada6;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 60%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.card a{
+    color: white;
+    font-weight: bold;
+}
+
+.contacto-Claudio:hover{
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
+
+.item-c {
+    grid-area: title;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.item-d {
+    grid-area: main;
+    /* max-height: 200px; */
+}
+
+.horarios-ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.horarios a {
+    grid-area: horarios;
+    text-decoration: none;
+    background-color: #feada6;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.horarios {
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.horarios:hover {
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+
+}
+
+iframe {
+    height: 300px;
+    width: 100%;
+    border: 0px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer {

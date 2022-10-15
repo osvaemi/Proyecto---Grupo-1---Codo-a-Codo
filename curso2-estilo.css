@@ -10,10 +10,7 @@ html {
 }
 
 body{
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    background-color: #dfa061;
 }
 
 nav {
@@ -21,30 +18,34 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    background-color: whitesmoke;
+    background-color: #672f0a;
     color: #232b2b;
     width: 99%;
 }
 
 .nav-links a {
-    color: #232b2b;
+    color: whitesmoke;
     font-size: 16px;
 }
 
-
 .logo {
     font-size: 25px;
-    color: #232b2b;
+    color: whitesmoke;
     margin-left: 10px;
 }
 
+/* .logo:hover {
+    background-color: #232b2b;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+} */
 
 .logo {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.834);
+    box-shadow: 0 0 1px #4d2e07(0, 0, 0, 0);
     position: relative;
     -webkit-transition-property: color;
     transition-property: color;
@@ -54,13 +55,12 @@ nav {
   .logo:before {
     content: "";
     position: absolute;
-    border-radius: 10px;
     z-index: -1;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #feada6;
+    background: #7a4a10;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -73,7 +73,7 @@ nav {
     transition-timing-function: ease-out;
   }
   .logo:hover, .logo:focus, .logo:active {
-    color: white;
+    color: whitesmoke;
   }
   .logo:hover:before, .logo:focus:before, .logo:active:before {
     -webkit-transform: scaleX(1);
@@ -97,8 +97,7 @@ nav {
 }
 
 .menu a:hover {
-    transition: all .4s ease-in-out;
-    background-color: #feada6;
+    background-color: #7a4a10;
     color: white;
     border-radius: 10px;
 }
@@ -108,40 +107,128 @@ header {
     width: 100%;
     display: flex;
     vertical-align: bottom;
-    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    background-image: linear-gradient(to top, #dfa061 0%, #672f0a 100%);
     padding-top: 100px;
-    padding-left: 10px;
-    color: #232b2b;
+    padding-left: 25px;
+    color: #2b1a06;
     font-weight: 500;
+    /* box-shadow: 1px 2px rgba(0, 0, 0, 0.2); */
 }
 
-h1{
-    font-size: large;
-    margin-left: 1%;
-    margin-top: 2%;
+img {
+    border-radius: 10px;
 }
 
-.formulario {
-    width: 100%;
-    display: flex;
-    /* padding: 20px; */
-    justify-content: center;
-    height: 500px;
+/* .item-a{
+    grid-area: photo;
 }
 
-form{
+.item-b{
+    grid-area: aside;
+} */
+
+.container {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: 25% 65%;
+    grid-template-rows: 50px;
+    column-gap: 4%;
+    row-gap: 10px;
+    grid-template-areas:
+        "card title"
+        "card main"
+        "card ."
+        "card horarios"
+        ". mapa";
+}
+
+.card {
     display: flex;
     flex-direction: column;
-    width: 80%;
-}
-
-form li {
-    list-style-type: none;
-}
-
-.nyap{
-    display: flex;
     justify-content: space-between;
+    align-items: center;
+    grid-area: card;
+    padding: 10px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    background-color:#963e0e8f
+}
+
+.title {
+    margin-top: 10px;
+    color: rgb(212, 212, 212);
+    font-size: 22px;
+}
+
+.info-Gordon {
+    margin-bottom: 10px;
+}
+
+.contacto-Gordon {
+    background-color: #903b0d;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 60%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.card a{
+    color: white;
+    font-weight: bold;
+}
+
+.contacto-Gordon:hover{
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
+
+.item-c {
+    grid-area: title;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.item-d {
+    grid-area: main;
+    /* max-height: 200px; */
+}
+
+.horarios-ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.horarios a {
+    grid-area: horarios;
+    text-decoration: none;
+    background-color: #903b0d;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.horarios {
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    height: 300px;
+    width: 100%;
+    border: 0px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -149,7 +236,7 @@ footer {
     align-items: stretch;
     height: 150px;
     padding: 20px;
-    background-color: #232b2b;
+    background-color: #3a2205;
     color: #f5efef;
     width: 100%;
     align-content: center;
@@ -165,16 +252,11 @@ footer {
     list-style-type: none;
     text-decoration: none;
 }
-.footer-links li:hover{
-    transform: scale(1.2);
-    transition: all .4s ease-in-out;
-}
 
 .footer-accesos {
     list-style-type: none;
     text-decoration: none;
 }
-
 
 .footer-accesos a {
     color: #f5efef;
@@ -196,7 +278,7 @@ footer {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background: #314652;
+    background: #903b0d;
     color: #f1f1f1;
     border-radius: 50%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);

@@ -11,9 +11,6 @@ html {
 
 body{
     background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 nav {
@@ -30,7 +27,6 @@ nav {
     color: #232b2b;
     font-size: 16px;
 }
-
 
 .logo {
     font-size: 25px;
@@ -110,38 +106,133 @@ header {
     vertical-align: bottom;
     background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
     padding-top: 100px;
-    padding-left: 10px;
+    padding-left: 25px;
     color: #232b2b;
     font-weight: 500;
 }
 
-h1{
-    font-size: large;
-    margin-left: 1%;
-    margin-top: 2%;
+img {
+    border-radius: 10px;
 }
 
-.formulario {
-    width: 100%;
-    display: flex;
-    /* padding: 20px; */
-    justify-content: center;
-    height: 500px;
+.container {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: 10%, 10%, 10%;
+    column-gap: 4%;
+    row-gap: 10px;
 }
 
-form{
+.card {
     display: flex;
     flex-direction: column;
-    width: 80%;
-}
-
-form li {
-    list-style-type: none;
-}
-
-.nyap{
-    display: flex;
     justify-content: space-between;
+    grid-area: card;
+    padding: 10px;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img{
+    max-height: 200px;
+}
+
+.card:hover{
+    transform: scale(1.01);
+    transition: all .4s ease-in-out; 
+
+}
+
+.cursos-index{
+    margin: 0 auto;
+}
+
+.cursos-index li{
+    display: inline-block;
+}
+
+.title {
+    margin-top: 10px;
+    color: grey;
+    font-size: 22px;
+}
+
+.info-Claudio {
+    margin-bottom: 10px;
+}
+
+.contacto {
+    background-color: #feada6;
+    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 60%;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.card a{
+    color: white;
+    font-weight: bold;
+}
+
+.contacto:hover{
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
+
+.item-c {
+    grid-area: title;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.item-d {
+    grid-area: main;
+    /* max-height: 200px; */
+}
+
+.horarios-ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.horarios a {
+    grid-area: horarios;
+    text-decoration: none;
+    background-color: #feada6;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.horarios {
+    list-style-type: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.horarios:hover {
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+
+}
+
+iframe {
+    height: 300px;
+    width: 100%;
+    border: 0px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 footer {
