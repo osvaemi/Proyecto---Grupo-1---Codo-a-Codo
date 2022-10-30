@@ -117,8 +117,8 @@ header {
 
 h1{
     font-size: large;
-    margin-left: 1%;
-    margin-top: 2%;
+    margin-top: 10px;
+    margin-left: 10%;
 }
 
 .formulario {
@@ -128,6 +128,104 @@ h1{
     justify-content: center;
     height: 500px;
 }
+.formulario-grupo input{
+    height: 35px;
+    width: 20%;
+    border-radius: 4px;
+    border: 1px solid
+}
+
+.formulario-grupo-input{
+    position: relative;
+}
+
+.formulario-imput-error{
+    font-size: 0.8em;
+    font-weight: bold;
+    display: none;
+
+}
+
+.formulario-imput-error-activo{
+    display: block
+}
+
+.formulario-validacion-estado{
+    position:sticky;
+    opacity: 0;
+}
+
+.formulario-menzaje{
+    margin: 10px 0;
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 15px;
+    border-radius: 5px;
+    display: none;
+
+}
+
+.formulario-menzaje-activo{
+    display: block;
+}
+
+.formulario-grupo-submit{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+
+}
+
+.formulario-btn{
+    margin: 0 0 10px 0;
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    font-size: large;
+    font-weight: bolder;
+
+}
+
+.formulario-btn:hover{
+    transform: scale(1.02);
+    transition: all .4s ease-in-out; 
+}
+
+.formulario-menzaje-exito{
+    font-size: 14px;
+    color: #119200;
+    display: none;
+
+}
+
+.formulario-menzaje-exito-activo{
+    display: block;
+}
+
+.formulario-grupo-correcto .formulario-validacion-estado{
+    color:#1ed12d;
+    opacity: 1;
+
+}
+
+.formulario-grupo-incorrecto label{
+    font-weight: bold;
+    color:#bb2929;
+
+}
+.formulario-grupo-incorrecto input{
+    border: 3px solid #bb2929;
+
+}
+.formulario-grupo-incorrecto .formulario-validacion-estado{
+    color:#bb2929;
+    opacity: 1;
+
+}
+
 
 form{
     display: flex;
@@ -137,6 +235,11 @@ form{
 
 form li {
     list-style-type: none;
+}
+
+.curso-desplegable{
+    width: 20%;
+
 }
 
 .nyap{
@@ -205,6 +308,12 @@ footer {
 
 .buttons a:hover {
     transform: scale(1.2);
+}
+
+#summitButton{
+    margin: 10px 0;
+    width: 25%;
+    
 }
 
 #copyright {
