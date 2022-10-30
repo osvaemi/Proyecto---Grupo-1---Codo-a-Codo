@@ -10,7 +10,7 @@ const expresiones = {
 const campos = {
 	apellido: false,
     nombre: false,
-	mail: false,
+	mail: false
 }
 
 const validarFormulario = (e) => {
@@ -56,15 +56,15 @@ formulario.addEventListener('submit', (e) => {
 	if(campos.nombre && campos.apellido && campos.mail){
 		formulario.reset();
 
-		document.getElementById('formulario-mensaje-exito').classList.add('formulario-mensaje-exito-activo');
+		document.getElementById('formulario-menzaje-exito').classList.add('formulario-menzaje-exito-activo');
 		setTimeout(() => {
-			document.getElementById('formulario-mensaje-exito').classList.remove('formulario-mensaje-exito-activo');
+			document.getElementById('formulario-menzaje-exito').classList.remove('formulario-menzaje-exito-activo');
 		}, 5000);
 
-		document.querySelectorAll('.formulario-grupo-correcto').forEach((icono) => {
+		document.querySelectorAll('formulario-grupo-correcto').forEach((icono) => {
 			icono.classList.remove('formulario-grupo-correcto');
 		});
 	} else {
-		document.getElementById('formulario-mensaje').classList.add('formulario-mensaje-activo');
+		document.getElementById('formulario-menzaje').classList.add('formulario-menzaje-activo');
 	}
 });
