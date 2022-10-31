@@ -30,16 +30,36 @@
     <section>
         <h1>Ingresá tus datos y nos pondremos en contacto con vos!</h1>
 
-        <div class="formulario">
+        <div class="formulario" id="formulario">
             <form>
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido">
-                <label for="edad">Edad</label>
-                <input type="text" id="edad" name="edad">
+                <div class="formulario-grupo" id="grupo-nombre">
+                    <label for="nombre">Nombre</label>
+                    <div class="formulario-grupo-input">
+                        <input type="text" class="nombre" id="nombre" name="nombre" >
+                        <i class="formulario-validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario-imput-error">El nombre no debe de tener numeros o caracteres especiales</p>
+                </div>
+
+                <div class="formulario-grupo" id="grupo-apellido">
+                    <label for="apellido">Apellido</label>
+                    <div class="formulario-grupo-input">
+                        <input type="text" id="apellido" name="apellido" >
+                        <i class="formulario-validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <p class="formulario-imput-error">El apellido no debe de tener numeros o caracteres especiales</p>
+                </div>
+                
+                <div class="formulario-grupo" id="grupo-edad">
+                    <label for="edad">Edad</label>
+                    <div class="formulario-grupo-input">
+                        <input type="number" id="edad" name="edad" >
+                        <i class="formulario-validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+
                 <label for="curso">Curso</label>
-                <select name="curso" id="curso">
+                <select name="curso" class="curso-desplegable" id="curso">
                     <option disable selected>Seleccioná una opción!</option>
                     <option>Alfarería</option>
                     <option>Pintura</option>
@@ -60,8 +80,27 @@
                         <label for="noche">Noche: 18hs a 21hs</label>
                     </li>
                 </ul>
-                <label for="mail">Ingresá tu mail</label>
-                <input type="text" name="mail" id="mail">
+
+                <div class="formulario-grupo" id="grupo-mail">
+                    <label for="mail">Ingresá tu mail</label>
+                    <div class="formulario-grupo-input">
+                        <input type="email" name="mail" id="mail" >
+                        <i class="formulario-validacion-estado fa-solid fa-circle-xmark"></i>
+                    </div>
+                </div>
+
+                
+                <div class="formulario-menzaje" id="formulario-menzaje">
+                    <p><i class="fa-solid fa-triangle-exclamation"></i> <b>ERROR:</b> Porfavor rellene el formulario correctamente </p>
+                
+                </div>
+
+                <div class="formulario-grupo formulario-grupo-submit">
+                    <button type="submit" class="formulario-btn">Enviar</button>
+                    <p class="formulario-menzaje-exito" id="formulario-menzaje-exito"><i class="fa-solid fa-circle-check"></i> Se ha enviado correctamente</p>
+                </div>
+            
+            
             </form>
         </div>
     </section>
@@ -86,6 +125,9 @@
         </p>
 
     </footer>
+
+    <script src="contacto.js"></script>
+    <script src="https://kit.fontawesome.com/6fb3f10baf.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
