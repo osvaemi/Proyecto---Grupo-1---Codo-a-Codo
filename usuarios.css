@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #feada6;
+    color: #232b2b;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #232b2b;
+    font-size: 16px;
+}
+
+.logo {
+    font-size: 25px;
+    color: #232b2b;
+    margin-left: 10px;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .logo:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #232b2b;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .logo:hover, .logo:focus, .logo:active {
+    color: white;
+  }
+  .logo:hover:before, .logo:focus:before, .logo:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }  
+
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+
+.menu li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    padding: 5px 14px;
+}
+
+.menu a:hover {
+    transition: all .4s ease-in-out;
+    background-color: #feada6;
+    color: white;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: x-large;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+    padding: 3%;
+}
+
+.image-container{
+    display: flex;
+    width: 100%;
+}
+
+.image-container img{
+    width: 100%;
+    max-height: 20%;
+}
+
+article{
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}

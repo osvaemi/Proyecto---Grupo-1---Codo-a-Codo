@@ -114,6 +114,18 @@ header{
     animation-duration: 2s;
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: xx-large;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}
+
 img {
     border-radius: 10px;
 }
@@ -132,9 +144,8 @@ section{
 
 .cursos-index{
     display: grid;
-    column-gap: 5%;
-    grid-template-areas:
-        "card card card"
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:40px;
 }
 
 .card {
@@ -198,6 +209,26 @@ section{
 }
 
 .contacto:hover{
+    transform: scale(1.2);
+    transition: all .4s ease-in-out;
+}
+
+.usuarios{
+    display: flex;
+    font-size: x-large;
+    background-color: #feada6;
+    margin-top: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+    width: fit-content;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.usuarios:hover{
     transform: scale(1.2);
     transition: all .4s ease-in-out;
 }
